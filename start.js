@@ -8,7 +8,7 @@ module.exports = {
         env: { },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "{{args && args.mode === 'offline' ? 'python studio.py --offline --server 127.0.0.1' : 'python studio.py --server 127.0.0.1'}}"
+          "python {{args.mode === 'offline' ? 'studio.py --offline --server 127.0.0.1' : args.mode === 'online' ? 'studio.py --server 127.0.0.1' : 'studio.py'}}",
           
         ],
         on: [{

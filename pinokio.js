@@ -69,9 +69,12 @@ module.exports = {
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js",
+          params: {
+            mode: "online",
+          }
         }, {
           icon: "fa-solid fa-power-off",
-          text: "<div><strong>Start</strong><br><div>Offline Mode</div></div>",
+          text: "<div><strong>Start --offline</strong><br><div>normal start is required first run to download models!</div></div>",
           href: "start.js",
           params: {
             mode: "offline",
