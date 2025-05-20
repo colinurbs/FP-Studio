@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "3.7",
   title: "FramePack-Studio",
-  description: "",
+  description: "Video App featuring: I2V, T2V, F1, job queueing, timestamped prompts, prompt blending and LoRA support",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
@@ -69,7 +69,17 @@ module.exports = {
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js",
+          params: {
+            mode: "online",
+          }
         }, {
+          icon: "fa-solid fa-power-off",
+          text: "<div><strong>Start --offline</strong><br><div>normal start required for first video gen (inc. F1) to download models!</div></div>",
+          href: "start.js",
+          params: {
+            mode: "offline",
+          }
+        }, {            
           icon: "fa-solid fa-plug",
           text: "Update",
           href: "update.js",

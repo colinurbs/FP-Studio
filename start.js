@@ -8,7 +8,8 @@ module.exports = {
         env: { },                   // Edit this to customize environment variables (see documentation)
         path: "app",                // Edit this to customize the path to start the shell from
         message: [
-          "python studio.py --server 127.0.0.1",    // Edit with your custom commands
+          "python {{args.mode === 'offline' ? 'studio.py --offline --server 127.0.0.1' : args.mode === 'online' ? 'studio.py --server 127.0.0.1' : 'studio.py'}}",
+          
         ],
         on: [{
           // The regular expression pattern to monitor.
