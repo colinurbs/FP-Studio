@@ -65,7 +65,6 @@ module.exports = {
         }]
       } else {
         return [{
-          default: true,
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js",
