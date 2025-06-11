@@ -4,7 +4,7 @@ module.exports = {
     params: {
       message: "git pull"
     }
-  }, {
+  },{
     method: "shell.run",
     params: {
       path: "app",
@@ -18,6 +18,11 @@ module.exports = {
       message: "uv pip install -r requirements.txt"
       }
     },
+    {
+      method: "notify",
+      params: {
+        html: "Click the 'start' tab to get started!"
+      }
+    }
   ]
 }
-
