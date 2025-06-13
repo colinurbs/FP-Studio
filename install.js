@@ -14,7 +14,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/colinurbs/FramePack-Studio.git app",
+          "git clone -b develop https://github.com/ai-anchorite/FramePack-Studio.git app",
         ]
       }
     },
