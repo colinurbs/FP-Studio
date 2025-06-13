@@ -78,6 +78,13 @@ module.exports = {
           params: {
             mode: "offline",
           }
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "<div><strong>Start Post-processing</strong><br><div>Isolated post-processing without video gen.</div></div>",
+          href: "start.js",
+          params: {
+            mode: "toolbox",
+          }          
         }, {            
           icon: "fa-solid fa-plug",
           text: "Update",
