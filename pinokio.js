@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "3.7",
   title: "FramePack-Studio",
-  description: "[v0.4.0] FramePack Video App offering multiple generation types: Original, F1, video extension, end frame.  Features include: LoRA support, job queueing, advanced timestamped prompts, offline mode, a post-processing suite including upscaling, interpolation, filters and more!",
+  description: "[v0.4.1] FramePack Video App offering multiple generation types: Original, F1, video extension, end frame.  Features include: LoRA support, job queueing, advanced timestamped prompts, offline mode, a post-processing suite including upscaling, interpolation, filters and more!",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
@@ -78,6 +78,13 @@ module.exports = {
           params: {
             mode: "offline",
           }
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "<div><strong>Start Post-processing</strong><br><div>Isolated post-processing without video gen.</div></div>",
+          href: "start.js",
+          params: {
+            mode: "toolbox",
+          }          
         }, {            
           icon: "fa-solid fa-plug",
           text: "Update",
